@@ -71,11 +71,13 @@ internal class DefaultRegistrationWizard(
     override suspend fun createAccount(
             userName: String?,
             password: String?,
+            refreshToken: Boolean?,
             initialDeviceDisplayName: String?
     ): RegistrationResult {
         val params = RegistrationParams(
                 username = userName,
                 password = password,
+                refresh_token = refreshToken,
                 initialDeviceDisplayName = initialDeviceDisplayName
         )
         return performRegistrationRequest(params, LoginType.PASSWORD)

@@ -57,6 +57,7 @@ interface RegistrationWizard {
     suspend fun createAccount(
             userName: String?,
             password: String?,
+            refreshToken: Boolean?,
             initialDeviceDisplayName: String?
     ): RegistrationResult
 

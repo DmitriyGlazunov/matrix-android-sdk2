@@ -35,6 +35,10 @@ internal data class RegistrationParams(
         @Json(name = "password")
         val password: String? = null,
 
+        // the account refresh_token
+        @Json(name = "refresh_token")
+        val refresh_token: Boolean? = null,
+
         // device name
         @Json(name = "initial_device_display_name")
         val initialDeviceDisplayName: String? = null,
